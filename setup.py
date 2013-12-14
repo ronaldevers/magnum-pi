@@ -1,39 +1,34 @@
-from setuptools import setup, find_packages
-import sys, os
+import os
+from setuptools import setup
 
-version = '0.1.3'
+
+version = '1.0dev0'
 
 here = os.path.abspath(os.path.dirname(__file__))
-
 try:
     README = open(os.path.join(here, 'README.txt')).read()
-    CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 except IOError:
-    README = CHANGES = ''
+    README = ''
 
-setup(name='basketweaver',
-      version=version,
-      description="Provides utilities for making your own python package index.",
-      long_description=README + '\n\n' +  CHANGES,
-      classifiers=[
-        "Intended Audience :: Developers",
-        "Programming Language :: Python",
-        ],
-      keywords='python eggs pypi index package gz tar zip',
-      author='Christopher Perkins, Chris McDonough',
-      author_email='chris@percious.com',
-      url='http://code.google.com/p/basket-weaver/',
-      license='MIT',
-      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-      include_package_data=True,
-      zip_safe=True,
-      install_requires=[
-          # -*- Extra requirements: -*-
-          
-      ],
-      entry_points={
+
+setup(
+    name='magnum-pi',
+    version=version,
+    description='Builds a python package index out of a directory of packages',
+    long_description=README,
+    classifiers=[
+        'Intended Audience :: Developers',
+        'Programming Language :: Python',
+    ],
+    keywords='python eggs pypi index package gz tar zip whl wheel',
+    author='Ronald Evers',
+    author_email='ronald@ch10.nl',
+    url='https://github.com/ronaldevers/magnum-pi/',
+    license='MIT',
+    packages=['magnumpi'],
+    entry_points={
         'console_scripts': [
-            'makeindex = basketweaver.makeindex:main'
-            ],
-        }
-   )
+            'makeindex = magnumpi.makeindex:main'
+        ],
+    }
+)

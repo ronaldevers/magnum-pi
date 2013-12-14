@@ -3,7 +3,7 @@ from setuptools import setup
 
 version = '1.1dev'
 
-with open('README.txt') as f:
+with open('README.md') as f:
     long_description = f.read()
 
 

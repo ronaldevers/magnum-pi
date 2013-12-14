@@ -73,6 +73,10 @@ Don't miss the `/index` at the end of the index url or it won't work!
 
 # Changes
 
+## 1.1 (2013-12-15)
+
+- simplify setup.py and use markdown for readme
+
 ## 1.0 (2013-12-14)
 
 - fork off of basketweaver

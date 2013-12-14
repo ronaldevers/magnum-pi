@@ -1,21 +1,17 @@
-import os
 from setuptools import setup
 
 
 version = '1.1dev'
 
-here = os.path.abspath(os.path.dirname(__file__))
-try:
-    README = open(os.path.join(here, 'README.txt')).read()
-except IOError:
-    README = ''
+with open('README.txt') as f:
+    long_description = f.read()
 
 
 setup(
     name='magnum-pi',
     version=version,
     description='Builds a python package index out of a directory of packages',
-    long_description=README,
+    long_description=long_description,
     classifiers=[
         'Intended Audience :: Developers',
         'Programming Language :: Python',

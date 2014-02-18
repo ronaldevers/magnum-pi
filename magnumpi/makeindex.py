@@ -67,7 +67,7 @@ def write_index(root, packages, _os, _open):
 
 def main():
     if len(sys.argv) != 2:
-        sys.exit('must pass direcory with packages as argument')
+        sys.exit('must pass directory with packages as argument')
     root = sys.argv[1]
 
     packages = read_packages(root, os)

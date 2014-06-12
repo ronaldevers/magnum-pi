@@ -73,6 +73,10 @@ Don't miss the `/index` at the end of the index url or it won't work!
 
 # Changes
 
+## 1.2 (2014-06-12)
+
+- added manifest file to fix installation from pypi (J. Leidel)
+
 ## 1.1 (2013-12-15)
 
 - simplify setup.py and use markdown for readme

@@ -40,10 +40,10 @@ def write_index(root, packages, _os, _open):
 
     for project, files in sorted(packages.items()):
         print('Project: %s' % project)
-        project_dir = _os.path.join(index_root, project)
+        project_dir = _os.path.join(index_root, project.lower())
         if not _os.path.exists(project_dir):
             _os.makedirs(project_dir)
-        top.write('<li><a href="%s/index.html">%s</a>\n' % (project, project))
+        top.write('<li><a href="%s/index.html">%s</a>\n' % (project.lower(), project))
 
         sub = _open(_os.path.join(project_dir, 'index.html'), 'w')
         sub.writelines(['<html>\n',
